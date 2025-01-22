@@ -10,7 +10,7 @@ onMounted(TTMenuClass.loadProducts);
       <div v-if="TTMenuClass.loading.value">Loading...</div>
       <div v-else-if="TTMenuClass.error.value" class="text-xl text-red-600">{{ TTMenuClass.error.value }}</div>
       <div v-else>
-        <ul class="grid grid-rows-1 gap-6">
+        <ul v-auto-animate="{ duration: 250 }" class="grid grid-rows-1 gap-6">
           <li v-for="product in TTMenuClass.filter.value" :key="product.id" class="flex items-center gap-1 sm:gap-4">
             <NuxtImg :src="product.images[0]" width="100"/>
             <div class="flex flex-col gap-2">

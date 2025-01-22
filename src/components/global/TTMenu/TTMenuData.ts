@@ -8,8 +8,9 @@ export class TTMenuData {
     error = ref<string | null>(null);
 
     filter = computed(() => {
-        const query = this.inputRef.value.toLowerCase().trim();
+        const query: string = this.inputRef.value.toLowerCase().trim();
         if (!query) return this.products.value;
+
         return this.products.value.filter((p: IProduct) => p.title.toLowerCase().includes(query) || p.category.toLowerCase().includes(query));
     });
 
@@ -25,8 +26,7 @@ export class TTMenuData {
                 return null;
             }
 
-            const data: IProductResponse = await response.json();
-            return data;
+            return await response.json();
         } catch (e) {
             console.error(`Error fetching products: ${(e as Error).message}`);
             return null;

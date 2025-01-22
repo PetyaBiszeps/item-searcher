@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     srcDir: 'src/',
 
     // Modules and components
-    modules: ["@nuxt/ui", '@nuxt/image'],
+    modules: ["@nuxt/ui", '@nuxt/image', '@formkit/auto-animate/nuxt'],
 
     components: {
         dirs: [
