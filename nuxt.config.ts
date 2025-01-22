@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
     compatibilityDate: '2025-01-21',
-    devtools: { enabled: false },
+    devtools: { enabled: true },
 
     // Head [Icon, charset, meta]
     app: {
