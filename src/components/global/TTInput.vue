@@ -1,11 +1,9 @@
 <script lang="ts" setup>
 import { TTMenuClass } from "@/components/global/TTMenu/TTMenuData";
-
-// class="w-full h-24 p-8 text-title text-4xl bg-backgroundBlocks rounded-3xl"
 </script>
 
 <template>
-  <UInput v-model="TTMenuClass.inputRef.value" placeholder="Search..."/>
+  <input v-model="TTMenuClass.inputRef.value" class="w-full h-24 p-8 text-title text-4xl bg-backgroundBlocks rounded-3xl" placeholder="Search..." type="search">
 </template>
 
 <style scoped>
